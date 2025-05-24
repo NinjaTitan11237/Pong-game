@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atomic Structure and the Periodic Table</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1, h3 {
+            color: #333;
+        }
+        #content {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 15px;
+            font-size: 16px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <h1>Atomic Structure and the Periodic Table</h1>
+        <h3>Atomic Number</h3>
+        <ul>
+            <li>It represents the number of protons in an atom's nucleus.</li>
+            <li>Every element has a unique atomic number (e.g., Hydrogen is 1, Helium is 2).</li>
+            <li>The atomic number determines the element's identity and chemical properties.</li>
+            <li>It equals the number of electrons in a neutral atom.</li>
+            <li>Scientists use the symbol 'Z' to represent atomic number.</li>
+        </ul>
+        <h3>Mass Number</h3>
+        <ul>
+            <li>Mass number is the total number of protons and neutrons in an atom.</li>
+            <li>Represented by the symbol 'A'.</li>
+            <li>Mass number = Number of protons + Number of neutrons.</li>
+        </ul>
+        <h3>Arranging Electrons: Bohr’s Model</h3>
+        <p>Niels Bohr (1885-1962): Danish physicist who made fundamental contributions to atomic structure and quantum mechanics.</p>
+        <h3>Electronic Structure</h3>
+        <p>Electrons orbit the nucleus in shells (energy levels).</p>
+    </div>
+    <button id="download">Download PDF</button>
+
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            const element = document.getElementById('content');
+            html2pdf()
+                .from(element)
+                .save('atomic_structure.pdf');
+        });
+    </script>
+</body>
+</html>
